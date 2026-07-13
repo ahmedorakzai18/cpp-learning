@@ -12,5 +12,6 @@ int main()
             cout <<"composite";
              
             break; 
+            
         }
 }

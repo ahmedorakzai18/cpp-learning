@@ -1,43 +1,44 @@
 #include<iostream>
 using namespace std; 
 
-class Student{
+class Car{
 
     public:
 
     string name; 
-    int roll; 
-    float gpa; 
-    int marks;
+    int model; 
+    float fuelavg;
 
-    void display()
+    // Default Constructor
+    Car()
     {
-        cout << "\nthe name: " << name; 
-        cout << "\nthe roll: " << roll; 
-        cout << "\nthe gpa: " << gpa; 
-        cout << "\nthe marks: " << marks; 
+
     }
-};
+
+    //Parameterized Constructor
+    Car(string n, int m , float f)
+    {
+        name = n ;
+        model = m ;
+        fuelavg = f; 
+    }
+
+}; 
 
 int main()
 {
+Car c1("bmw" , 1990 , 13.5);
 
-    Student s1;
-    s1.name;
-    cout << "enter the name: "; 
-    getline(cin , s1.name);
+cout << "name: " << c1.name << endl; 
+cout << "model: " << c1.model << endl; 
+cout << "fuel Average: " << c1.fuelavg << endl; 
 
-    s1.gpa; 
-    cout << "enter the gpa: "; 
-    cin >> s1.gpa; 
+Car c2;
+c2.name = "audi"; 
+c2.model = 2000; 
+c2.fuelavg = 15.8; 
 
-    s1.marks; 
-    cout << "enter the marks: "; 
-    cin >> s1.marks; 
-
-    s1.roll; 
-    cout << "enter the roll: "; 
-    cin >> s1.roll; 
-
-    s1.display();
+cout << "name: " << c2.name << endl; 
+cout << "model: " << c2.model << endl; 
+cout << "fuel Average: " << c2.fuelavg << endl; 
 }

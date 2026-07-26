@@ -1,25 +1,22 @@
-#include <iostream>
-using namespace std;
+#include<iostream>
+using namespace std; 
 
-class Employee {
-  private:
-    // Private attribute
-    int salary;
+class Student
+{
+  public: // Can be accessed through main and anyone can change it.
 
-  public:
-    // Setter
-    void setSalary(int s) {
-      salary = s;
-    }
-    // Getter
-    int getSalary() {
-      return salary;
-    }
+  string name; 
+  int roll ;
+
 };
 
-int main() {
-  Employee myObj;
-  myObj.setSalary(50000);
-  cout << myObj.getSalary();
-  return 0;
+int main()
+{
+  Student s1; 
+  s1.name = "Mazhar"; 
+  s1.roll = 1; 
+
+  cout << s1.name << endl; 
+  cout << s1.roll << endl; 
+
 }

@@ -1,44 +1,39 @@
-#include<iostream>
+#include <iostream>
 using namespace std; 
 
-class Car
+class Employee
 {
     private:
-    float price; 
+    int salary;
 
     public:
     string name; 
-    int model; 
+    int join; 
 
-    Car(string n, int m)
+    Employee(string n, int j)
     {
-        name = n ; 
-        model =m ;
+        join = j; 
+        name = n; 
     }
 
-    //getter
-
-    void getprice()
+    void getsalary()
     {
-        cout << "price of the car is: " << price; 
+        cout << "salary is: " << salary; 
     }
 
-    // setter
-
-    void setter(float p)
+    void setsalary(int s)
     {
-        price = p ; 
+        salary = s; 
     }
 };
 
 int main()
 {
-    Car c1("toyota" , 2014); 
+    Employee e1("Robin" , 2018);
 
-    cout << "name: " << c1.name << endl;
-    cout << "model: " << c1.model << endl;
-
-    c1.setter(3059000.032);
+    e1.setsalary(234322);
     
-    c1.getprice(); 
+    
+    e1.getsalary(); 
+
 }

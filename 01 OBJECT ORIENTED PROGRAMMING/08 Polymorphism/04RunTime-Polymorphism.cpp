@@ -30,13 +30,9 @@ class cat:public Animal
 
 int main()
 {
-    Animal* a; 
-    dog d; 
-    cat c; 
+    Animal* a1 = new dog(); 
+    Animal* a2 = new cat(); 
 
-    a = &d; 
-    a->Sound(); 
-    
-    a = &c; 
-    a->Sound(); 
+    a1->Sound(); 
+    a2->Sound(); 
 }

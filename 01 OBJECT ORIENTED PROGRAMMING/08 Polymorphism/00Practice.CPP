@@ -1,44 +1,40 @@
 #include<iostream>
 using namespace std; 
 
-class Animal
+class Vehicle
 {
     public:
-    virtual void Sound()
+    virtual void VehicleSound()
     {
-        cout << "Sound of an animal.\n"; 
+        cout << "A Vehicle makes some Noise"; 
     }
 }; 
 
-class Dog: public Animal
-{   
-    public:
-    void Sound()
-    {
-        cout << "Woof, Woof\n"; 
-    }
-};
-
-class Cat: public Animal
+class Car: public Vehicle
 {
     public:
-    void Sound()
+    void VehicleSound()
     {
-        cout << "Meow\n"; 
+        cout << "A car Zoommmmmmmmmm\n"; 
     }
 }; 
 
+class Bike: public Vehicle
+{
+    public:
+    void VehicleSound()
+    {
+        cout << "A bike brooommmmmmmmm\n"; 
+    }
+}; 
 
 int main()
 {
-    Animal* a; 
-    Dog d1; 
-    Cat c1; 
+// Dynamic Allocation 
+    Vehicle* a1 = new Car();
+    Vehicle* a2 = new Bike();
 
-    a = &d1; 
-    a->Sound(); 
 
-    a = &c1;
-    a->Sound(); 
-
+    a1->VehicleSound();
+    a2->VehicleSound();
 }

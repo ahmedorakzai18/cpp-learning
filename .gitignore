@@ -1,0 +1,20 @@
+```text
+# Executables and Binaries
+*.exe
+*.out
+*.app
+*.o
+*.obj
+
+# Build Directories
+build/
+bin/
+obj/
+
+# Editor / IDE configurations
+.vscode/
+.idea/
+
+# System Junk
+.DS_Store
+Thumbs.db
